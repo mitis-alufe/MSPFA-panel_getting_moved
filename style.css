@@ -1,0 +1,67 @@
+/*HERE IS THE CSS
+IT'S WHERE THE SICK COOL MAGIC HAPPENS
+NOT ANYTHING SPECIAL REALLY
+
+THERE ARE TWO img TAGS, ONE IS A PRETTY BIG GIF AND THE OTHER IS A TRANSPARENT IMAGE THE SOZE OF YOUR AVERAGE PAGE (in this case, 650x450)
+THEY'RE BOTH PLACED INSIDE A div TAG.
+
+<div id="container-fallingImage">
+    <img id="fallingImage">
+    <img>
+</div>
+
+THE div WHICH CONTAINS THE HUGE ASS GIF IS SET AS position: relative;
+IN THIS CASE, THAT JUST MEANS IT BECOMES A RELATIVE POINT FROM WHICH ITS CHILDREN TAGS CAN TAKE FROM
+IF THIS CONTAINER WASNT SET AS A RELATIVE POSITION, THE GIF WOULD STILL APPEAR ON TOP OF EVERYTHING IN THE SCREEN, BUT ITS TOP LEFT CORNER WOULD SNAP TO THE TOP LEFT CORNER OF THE SCREEN (the point usually seen as x=0,y=0 for the computer. the default position of everything)
+SINCE THAT WOULD CAUSE THE IMAGE TO DECENTRALISE HEAVILY, ESPECIALLY IN DIFFERENT SCREEN SIZES AND RESOLUTIONS, I MAKE THE CONTAINER'S POSITION RELATIVE SO IT ACTS AS ITS CHILDREN'S NEW x=0,y=0
+basically, it doesnt snap to the top left corner of the page, but the top left corner of the div
+MEANWHILE, THE OTHER transparent IMAGE IN THE HTML MAKES IT SO THE DIV KNOWS HOW BIG IT SHOULD BE, DEFINING WHAT THE NORMAL IMAGE SIZE IS
+PRETTY NEAT, PRETTY COOL, NO REAL JS NEEDED, WHICH IS ALWAYS PRETTY ELEGANT*/
+#container-fallingImage{
+    position: relative;
+}
+#fallingImage{
+    position: absolute;
+    top: -450px;
+    left: -650px;
+}
+
+
+/*ALL OF THIS DOWN HERE IS JUST THE CSS THAT MAKES THE PAGE LOOK LIKE AN MSPFA PAGE*/
+body{
+    margin: 0;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 12px;
+    background-color: #535353;
+    color: #000000;
+}
+#main{
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 5px 5px 5px;
+    background-color: #c6c6c6;
+}
+#container{
+    font-weight: bold;
+    font-size: 14px;
+}
+#slide{
+    display: table;
+  width: 600px;
+  max-width: 940px;
+  margin: 7px auto 23px auto;
+  padding: 0 25px;
+  word-wrap: break-word;
+  word-break: break-word;
+  background-color: #eeeeee;
+}
+
+#command{
+    text-align: center;
+  font-size: xx-large;
+  padding: 14px 0;
+}
+#content{
+    text-align: center;
+  margin-bottom: 14px;
+}
