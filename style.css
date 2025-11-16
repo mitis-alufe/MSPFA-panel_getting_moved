@@ -24,6 +24,8 @@ PRETTY NEAT, PRETTY COOL, NO REAL JS NEEDED, WHICH IS ALWAYS PRETTY ELEGANT*/
     position: absolute;
     top: -450px;
     left: -650px;
+    max-width: 1950px !important;
+    pointer-interactions: none;
 }
 
 
@@ -64,4 +66,5 @@ body{
 #content{
     text-align: center;
   margin-bottom: 14px;
+
 }
