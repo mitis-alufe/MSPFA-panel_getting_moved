@@ -1,3 +1,11 @@
+/*THESE ARE THE SICK ANIMATION FRAMES FOR THE WEBSITE ANIMATION*/
+@keyframes blackground{
+    0%{opacity: 0.0;}
+    17%{opacity: 1.0}
+    83%{opacity: 1.0;}
+    100%{opacity: 0;}
+}
+
 /*HERE IS THE CSS
 IT'S WHERE THE SICK COOL MAGIC HAPPENS
 NOT ANYTHING SPECIAL REALLY
@@ -24,8 +32,15 @@ PRETTY NEAT, PRETTY COOL, NO REAL JS NEEDED, WHICH IS ALWAYS PRETTY ELEGANT*/
     position: absolute;
     top: -450px;
     left: -650px;
-    max-width: 1950px !important;
-    pointer-interactions: none;
+}
+#blackground{
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    animation: 8s both blackground;
 }
 
 
@@ -36,6 +51,9 @@ body{
     font-size: 12px;
     background-color: #535353;
     color: #000000;
+
+    /*position: absolute;
+    top: -500px;*/
 }
 #main{
     width: 940px;
@@ -66,5 +84,4 @@ body{
 #content{
     text-align: center;
   margin-bottom: 14px;
-
 }
