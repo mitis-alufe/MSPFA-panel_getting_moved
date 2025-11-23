@@ -1,5 +1,5 @@
 /*THESE ARE THE SICK ANIMATION FRAMES FOR THE WEBSITE ANIMATION*/
-@keyframes blackground{
+@keyframes blackIn{
     0%{opacity: 0;}
     80%{opacity: 1;}
     90%{opacity: 1;}
@@ -7,11 +7,11 @@
 }
 @keyframes goUp{
     from{top:0;}
-    to{top:-800px;}
+    to{top:-1200px;}
 }
 @keyframes imgDown{
     from{top: -450px;}
-    to{top:350px;}
+    to{top:750px;}
 }
 
 @keyframes mainGone {
@@ -48,29 +48,40 @@ PRETTY NEAT, PRETTY COOL, NO REAL JS NEEDED, WHICH IS ALWAYS PRETTY ELEGANT*/
     position: absolute;
     top: -450px;
     left: -650px;
+    pointer-events: none;
 
-    animation: 1s ease-in 3.7s both imgDown;
+    z-index: 2;
 }
 
 /*page animation stuff*/
+#fallingImage.fall{
+    animation: 1s ease-in 3.7s both imgDown;
+}
+
 #blackground{
     top: 0;
     left: 0;
-    background-color: #000000;  
+    background-color: #000000;
+    opacity: 0;
     height: 100%;
     width: 100%;
     position: fixed;
-    animation: 2.5s 4s both blackground;
+    pointer-events: none;
+    z-index: 1;
 }
-header, #container{
+#blackground.blackin{
+    animation: 2.5s 4s both blackIn;
+}
+
+.goUp{
     position: relative;
     animation: 1s ease-in 3.7s both goUp;
 }
 
-#main{
+#main.mainGone{
     animation: 0s 5s both mainGone;
 }
-#links>div>a{
+#links a.goDown{
     position: relative;
     animation: 3s 8s both linkDown;
 }
@@ -89,6 +100,50 @@ body{
     padding: 0 5px 5px 5px;
     background-color: #c6c6c6;
 }
+
+nav{
+    font-family: "Arial";
+    font-weight: bold;
+    font-size: x-small;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #000;
+    color: #fff;
+    height: 15px;
+    padding: 2px;
+}
+nav *{
+    vertical-align: middle;
+}
+nav .heart{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0 6px;
+    padding: 0 !important;
+    background-image: url(https://mspfa.com/images/candyheart.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.mspfalogo{
+    width: 208px;
+    height: 102px;
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-right: 4px solid #b8b8b8;
+    background-color: #eee;
+    background-image: url("https://mspfa.com/images/VorkedLarfleeze.gif");
+}
+iframe{border: none;}
+.umcontainer{height: 102px;}
+.um{
+    float: right;
+    width: 728px;
+    height: 100%;
+}
+
 #container{
     font-weight: bold;
     font-size: 14px;
@@ -129,3 +184,4 @@ body{
 #links > div > a::before{
     content: "> ";
 }
+
