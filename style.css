@@ -1,25 +1,27 @@
 /*THESE ARE THE SICK ANIMATION FRAMES FOR THE WEBSITE ANIMATION*/
 @keyframes blackIn{
-    0%{opacity: 0;}
+    44%{opacity: 0;}
+    60%{opacity: 1;}
     80%{opacity: 1;}
-    90%{opacity: 1;}
-    100%{opacity: 0;}
+    90%{opacity: 0;}
 }
 @keyframes goUp{
-    from{top:0;}
-    to{top:-1200px;}
+    43%{top:0;}
+    50%{top:-2400px;} /* -1200 */
+    100%{top:-2400px;}
 }
 @keyframes imgDown{
-    from{top: -450px;}
-    to{top:750px;}
+    43%{top: -450px;} /* -450 */
+    50%{top:1950px;} /* 750 (-450+1200) */
+    100%{top:-750px;} /* 750 (-450+1200) */
 }
 
 @keyframes mainGone {
     to{background-color: #c6c6c600;}
 }
 @keyframes linkDown {
-    from{top: 0;}
-    to{top: 800px;}
+    80%{top: 0;}
+    to{top: 2000px;} /* 800 (1200-400) */
 }
 
 /*HERE IS THE CSS
@@ -53,9 +55,14 @@ PRETTY NEAT, PRETTY COOL, NO REAL JS NEEDED, WHICH IS ALWAYS PRETTY ELEGANT*/
     z-index: 2;
 }
 
-/*page animation stuff*/
-#fallingImage.fall{
-    animation: 1s ease-in 3.7s both imgDown;
+
+:root{
+    --anim-duration: 27.22s;
+}
+
+/* NOTE NOTE NOTE NOTE NOTE PAGE ANIMATION STUFF */
+.fall{
+    animation: var(--anim-duration) ease-in both imgDown;
 }
 
 #blackground{
@@ -69,22 +76,23 @@ PRETTY NEAT, PRETTY COOL, NO REAL JS NEEDED, WHICH IS ALWAYS PRETTY ELEGANT*/
     pointer-events: none;
     z-index: 1;
 }
-#blackground.blackin{
-    animation: 2.5s 4s both blackIn;
+.blackin{
+    animation: var(--anim-duration) both blackIn;
 }
 
 .goUp{
     position: relative;
-    animation: 1s ease-in 3.7s both goUp;
+    animation: var(--anim-duration) ease-in both goUp;
 }
 
-#main.mainGone{
-    animation: 0s 5s both mainGone;
+.mainGone{
+    animation: 5s 12s both mainGone;
 }
 #links a.goDown{
     position: relative;
-    animation: 3s 8s both linkDown;
+    animation: var(--anim-duration) both linkDown;
 }
+
 
 /*ALL OF THIS DOWN HERE IS JUST THE CSS THAT MAKES THE PAGE LOOK LIKE AN MSPFA PAGE*/
 body{
