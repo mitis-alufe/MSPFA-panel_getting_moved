@@ -1,18 +1,18 @@
 /*THESE ARE THE SICK ANIMATION FRAMES FOR THE WEBSITE ANIMATION*/
 @keyframes blackIn{
-    44%{opacity: 0;}
-    60%{opacity: 1;}
+    60%{opacity: 0;}
+    70%{opacity: 1;}
     80%{opacity: 1;}
     90%{opacity: 0;}
 }
 @keyframes goUp{
-    43%{top:0;}
-    50%{top:-2400px;} /* -1200 */
+    67%{top:0;}
+    70%{top:-2400px;}
     100%{top:-2400px;}
 }
 @keyframes imgDown{
-    43%{top: -450px;} /* -450 */
-    50%{top:1950px;} /* 750 (-450+1200) */
+    67%{top: -450px;} /* -450 */
+    70%{top:1950px;}
     100%{top:-750px;} /* 750 (-450+1200) */
 }
 
@@ -57,7 +57,7 @@ PRETTY NEAT, PRETTY COOL, NO REAL JS NEEDED, WHICH IS ALWAYS PRETTY ELEGANT*/
 
 
 :root{
-    --anim-duration: 27.22s;
+    --anim-duration: 14.68s;
 }
 
 /* NOTE NOTE NOTE NOTE NOTE PAGE ANIMATION STUFF */
@@ -76,9 +76,9 @@ PRETTY NEAT, PRETTY COOL, NO REAL JS NEEDED, WHICH IS ALWAYS PRETTY ELEGANT*/
     pointer-events: none;
     z-index: 1;
 }
-.blackin{
+/* .blackin{
     animation: var(--anim-duration) both blackIn;
-}
+} */
 
 .goUp{
     position: relative;
@@ -86,11 +86,11 @@ PRETTY NEAT, PRETTY COOL, NO REAL JS NEEDED, WHICH IS ALWAYS PRETTY ELEGANT*/
 }
 
 .mainGone{
-    animation: 5s 12s both mainGone;
+    animation: var(--anim-duration) both mainGone;
 }
 #links a.goDown{
     position: relative;
-    animation: var(--anim-duration) both linkDown;
+    animation: var(--anim-duration) 2s both linkDown;
 }
 
 
